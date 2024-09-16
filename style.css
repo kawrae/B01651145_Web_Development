@@ -1,0 +1,26 @@
+.container {
+    position: relative;
+    display: inline-block;
+}
+
+.overlay {
+    position: absolute;
+    top: 84px;
+    left: 84px;
+    width: 102px;
+    /* 226 - 44 */
+    height: 100px;
+    /* 224 - 44 */
+    background: rgba(255, 255, 255, 0.5);
+    /* Transparent */
+    z-index: 1;
+    /* Ensure it sits above the image */
+    pointer-events: none;
+    /* Makes this div not interactable */
+}
+
+img {
+    position: relative;
+    z-index: 0;
+    /* Ensure image is below the overlay */
+}

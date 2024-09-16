@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape Site</title>
+    <meta name="author" content="Corey Black">
+    <style>
+        .container {
+            position: relative;
+            display: inline-block;
+        }
+
+        img {
+            position: relative;
+            z-index: 0;
+            /* Ensure image is below the overlay */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Shape site</h1>
+    <br>
+    <h3>Click on the outside of the Red square</h3>
+
+    <div class="container">
+        <img src="image.png" usemap="#image-map">
+        <div class="overlay"></div>
+    </div>
+
+    <map name="image-map">
+        <!-- Red Square  -->
+        <!-- Not clickable area -->
+        <area target="" alt="Not clickable square" title="" coords="93,91,179,179" shape="rect">
+        <!-- Clickable area -->
+        <area target="_blank" alt="" title="" href="https://www.uws.ac.uk/" coords="45,45,224,225" shape="rect">
+
+        <!-- Green circle -->
+        <!-- Not clickable area -->
+        <area target="" alt="" title="" coords="363,136,87" shape="circle">
+        <!-- Clickable area -->
+        <area target="_blank" alt="" title="" href="https://darksouls3.wiki.fextralife.com/Dark+Souls+3+Wiki" coords="363,136,92" shape="circle">
+
+        <!-- Blue Triangle -->
+        <!-- Not Clickable area -->
+        <area target="" alt="" title="" coords="486,224,591,56,696,225,695,220,696,225" shape="poly">
+        <!-- Clickable area -->
+        <area target="_blank" alt="" title="" href="https://darksouls.wiki.fextralife.com/Dark+Souls+Wiki" coords="470,230,591,36,713,232" shape="poly">
+
+    </map>
+</body>
+
+</html>
