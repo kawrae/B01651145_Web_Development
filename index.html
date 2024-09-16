@@ -5,31 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shape Site</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <meta name="author" content="Corey Black">
-    <style>
-        .container {
-            position: relative;
-            display: inline-block;
-        }
-
-        img {
-            position: relative;
-            z-index: 0;
-            /* Ensure image is below the overlay */
-        }
-    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-    <h1>Shape site</h1>
+    <h1>Interactive Image Mapping</h1>
     <br>
-    <h3>Click on the outside of the Red square</h3>
 
+    <!-- Container -->
     <div class="container">
         <img src="image.png" usemap="#image-map">
         <div class="overlay"></div>
     </div>
 
+    <!-- Shape Maps -->
     <map name="image-map">
         <!-- Red Square  -->
         <!-- Not clickable area -->
@@ -41,14 +42,23 @@
         <!-- Not clickable area -->
         <area target="" alt="" title="" coords="363,136,87" shape="circle">
         <!-- Clickable area -->
-        <area target="_blank" alt="" title="" href="https://darksouls3.wiki.fextralife.com/Dark+Souls+3+Wiki" coords="363,136,92" shape="circle">
+        <area target="_blank" alt="" title="" href="https://darksouls3.wiki.fextralife.com/Dark+Souls+3+Wiki"
+            coords="363,136,92" shape="circle">
 
         <!-- Blue Triangle -->
         <!-- Not Clickable area -->
         <area target="" alt="" title="" coords="486,224,591,56,696,225,695,220,696,225" shape="poly">
         <!-- Clickable area -->
-        <area target="_blank" alt="" title="" href="https://darksouls.wiki.fextralife.com/Dark+Souls+Wiki" coords="470,230,591,36,713,232" shape="poly">
+        <area target="_blank" alt="" title="" href="https://darksouls.wiki.fextralife.com/Dark+Souls+Wiki"
+            coords="470,230,591,36,713,232" shape="poly">
 
+        <!-- Yellow Star -->
+        <!-- Not Clickable area -->
+        <area target="_blank" alt="" title="" coords="739,137,793,110,819,58,839,107,896,135,842,161,819,210,793,161"
+            shape="poly">
+        <!-- Clickable area -->
+        <area target="_blank" alt="" title="" href="https://bloodborne.wiki.fextralife.com/Bloodborne+Wiki"
+            coords="719,135,790,103,821,29,851,106,917,140,848,169,817,238,788,167" shape="poly">
     </map>
 </body>
 
