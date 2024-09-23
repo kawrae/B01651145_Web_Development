@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Page</title>
+    <meta name="Author" content="Corey Black - B01651145">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <h1>A Professional Sample Form</h1>
+
+    <!-- Form -->
+    <form method="post" enctype="text/plain" action="mailto:B01651145@studentmail.uws.ac.uk">
+        <fieldset>
+            <!-- Personal Information -->
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                First Name: *
+                <br><input type="text" name="fullname" size="50" maxlength="45" placeholder="Enter your first name">
+            </fieldset>
+
+            <!-- Feedback -->
+            <fieldset>
+                <legend>Feedback</legend>
+
+                Your Feedback:
+                <br><textarea name="comments" rows="5" cols="49" wrap="hard"
+                    placeholder="Provide your feedback here..."></textarea>
+            </fieldset>
+
+            <!-- Agreement -->
+            <fieldset>
+                <legend>Agreement</legend>
+
+                <br>Do you agree with the statement?<br>
+                <br><input type="checkbox" name="purchase" value="yes">Yes
+                <br><input type="checkbox" name="purchase" value="no">No
+            </fieldset>
+
+            <!-- Location -->
+            <fieldset>
+                <legend>Location</legend>
+
+                <br>What city are you from?<br>
+                <select id="City" name="City">
+                    <option value="Paisley">Paisley</option>
+                    <option value="Glasgow">Glasgow</option>
+                    <option value="Edinburgh">Edinburgh</option>
+                </select>
+            </fieldset>
+
+            <!-- Job Information -->
+            <fieldset>
+                <legend>Job Information</legend>
+
+                <br>Select your job:<br>
+                <br><input type="radio" name="source" value="Developer" tabindex="1">Developer
+                <br><input type="radio" name="source" value="Designer" tabindex="2">Designer
+                <br><input type="radio" name="source" value="Nurse" tabindex="3">Nurse
+            </fieldset>
+
+            <!-- Event Date -->
+            <fieldset>
+                <legend>Event Date</legend>
+
+                <br>Select a date for your feedback submission:<br>
+                <input type="date" id="birthday" name="birthday">
+            </fieldset>
+
+            <!-- File Upload -->
+            <fieldset>
+                <legend>File Upload</legend>
+
+                <br>Upload your degree(Accepted formats: .jpg, .png, .pdf):<br>
+                <input type="file" id="myfile" name="myfile">
+            </fieldset>
+
+            <!-- Submit Button -->
+            <input type="submit" id="submit" name="Submit">
+
+            <!-- Reset Button -->
+            <input type="reset" id="reset" name="Reset">
+        </fieldset>
+    </form>
+
+    <!-- Next page link -->
+    <br><a href="debug.html">Click for next page (debug page)</a>
+</body>
+
+</html>

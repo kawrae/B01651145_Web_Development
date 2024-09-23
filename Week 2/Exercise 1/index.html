@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1</title>
+    <meta name="author" content="Corey Black">
+
+    <!-- Internal Styling -->
+    <style>
+        html {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        #container {
+            margin: 0 auto;
+            width: 23vw;
+        }
+
+        table {
+            margin: 0 auto;
+        }
+
+        #submit,
+        #reset {
+            height: 25px;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        #submit,
+        #reset:hover {
+            background-color: rgb(122, 116, 116);
+            color: rgb(98, 238, 98);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <!-- Table Header -->
+        <h3>Basic Tables:</h3>
+        <p>Inserting a table, table borders and table headers</p>
+
+        <!-- Table -->
+        <table border="3" bordercolor="green">
+            <th>Available Colors</th>
+            <tr>
+                <td>Red</td>
+                <td>Black</td>
+                <td>Blue</td>
+            </tr>
+            <tr>
+                <td>Green</td>
+                <td>Gold</td>
+                <td>Silver</td>
+            </tr>
+            <tr>
+                <td>Yellow</td>
+                <td>Orange</td>
+                <td>Purple</td>
+            </tr>
+        </table>
+        <br>
+
+        <!-- Iframe Header -->
+        <h3>Iframes:</h3>
+        <p>Inserting iframes, setting height and width & using an iframe for a link target</p>
+
+        <!-- Iframe -->
+        <iframe src="http://www.teachucomp.com" height="120" width="400">
+
+        </iframe>
+
+        <br>
+
+        <!-- Forms Header -->
+        <h3>Forms:</h3>
+
+        <!-- Forms -->
+        <form method="post" enctype="text/plain" action="mailto:B01651145@studentmail.uws.ac.uk">
+            <!-- Name -->
+            <br>Your Full Name:
+            <input type="text" name="fullname" size="50" maxlength="45">
+
+            <!-- User Comments -->
+            <br><br>Your Comments:
+            <textarea name="comments" rows="5" cols="49" wrap="hard"></textarea>
+
+            <!-- Checkboxes -->
+            <br><br>Have you purchased from us before?
+            <br><input type="checkbox" name="purchase" value="yes">Yes
+            <br><input type="checkbox" name="purchase" value="no">No
+
+            <!-- Radio Buttons -->
+            <br><br>How did you hear about us?
+            <br><input type="radio" name="source" value="tvradio" tabindex="1">TV, Radio
+            <br><input type="radio" name="source" value="print" tabindex="2">Print Ad
+            <br><input type="radio" name="source" value="internet" tabindex="3">Internet Search
+
+            <!-- Dropdown  -->
+            <br><br><label for="cars">Which best declares your status:</label>
+            <select id="Status" name="Status">
+                <option value="Personal">Personal</option>
+                <option value="Student">Student</option>
+                <option value="Business">Business</option>
+                <option value="Teacher">Teacher</option>
+            </select>
+
+            <!-- Reset Button -->
+            <br><br><input type="reset" value="Reset" id="reset">
+
+            <!-- Submit Button -->
+            <br><br><input type="submit" value="Submit" id="submit">
+
+        </form>
+
+        <!-- Video & Audio Header -->
+        <br>
+        <h3>Video & Audio:</h3>
+
+        <!-- Video & Audio -->
+        <video controls autoplay width="420" height="300">
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <audio controls>
+            <source src="audio.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+        </audio>
+
+        <iframe width="420" height="400" src="https://www.youtube.com/embed/yrwUWF0d_kw" frameborder="0" title="Dark souls as an 80s Dark Fantasy movie"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen autoplay></iframe>
+
+    </div>
+</body>
+
+</html>
