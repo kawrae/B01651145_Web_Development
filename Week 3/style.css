@@ -1,0 +1,92 @@
+/* Demonstration of External Stylesheet */
+
+
+/* Text alignment and font variables */
+html,
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-image:url(shark.webp);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    color: white;
+    margin: 50px;
+    padding: 10px;
+    text-align: center;
+    border: dashed white 1px;
+}
+
+/* Font style and decorations */
+h1 {
+    letter-spacing: 3pt;
+    color: hsl(212, 57%, 67%);
+    font-weight: 600;
+    font-style: italic;
+    text-shadow: 2px 2px 15px blue;
+}
+
+/* Use of an ID to change a specific element and not all elements of the same type */
+/* Also use of :hover tag that is self explanatory */
+#heading3:hover {
+    color: hsl(212, 57%, 67%);
+}
+
+/* Use of class to reference single paragraph element */
+.paragraph1:hover {
+    color: hsl(249, 57%, 67%);
+}
+
+/* Text indentation */
+.indented {
+    text-indent: 35px;
+}
+
+/* Text transformation */
+.transformed {
+    text-transform: uppercase;
+}
+
+/* Link styling */
+a:link {
+    font-size: 24px;
+    color: rgb(37, 34, 236);
+}
+
+a:visited {
+    color: rgb(86, 243, 72);
+    text-decoration: none;
+}
+
+a:hover {
+    color: gray;
+}
+
+/* List styling */
+.list1 {
+    list-style: circle;
+}
+
+.list2 {
+    list-style-image:url(list_image.png);
+}
+
+
+/* Text wrapping */
+div {
+    white-space: nowrap;
+}
+
+/* Images */
+img {
+    width: 400px;
+    height: 600px;
+    opacity: 0.7;
+    float: middle;
+}
+
+/* Centering Images */
+.center-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
