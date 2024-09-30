@@ -4,7 +4,6 @@ html {
   padding: 0;
   height: 100%;
   font-family: Arial, sans-serif;
-  background-image: linear-gradient(-135deg, rgb(0, 5, 54) 25%, rgb(1, 28, 148) 100%);
   overflow: hidden;
 }
 
@@ -46,6 +45,10 @@ html {
   /* Add border on hover */
   color: #101d66;
   /* Change text color on hover */
+}
+
+.disabled {
+  pointer-events: none;
 }
 
 #main-content {
