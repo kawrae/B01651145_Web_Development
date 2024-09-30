@@ -4,9 +4,10 @@
 /* Text alignment and font variables */
 html,
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 16px;
-    background-image:url(shark.webp);
+    background-image: url(imgs/leaves.jpg);
+    background-size: 100px;
     background-repeat: repeat;
     background-attachment: fixed;
     color: white;
@@ -14,6 +15,15 @@ body {
     padding: 10px;
     text-align: center;
     border: dashed white 1px;
+}
+
+/* Main Container */
+/* Text Wrapping */
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    white-space: wrap;
 }
 
 /* Font style and decorations */
@@ -28,12 +38,12 @@ h1 {
 /* Use of an ID to change a specific element and not all elements of the same type */
 /* Also use of :hover tag that is self explanatory */
 #heading3:hover {
-    color: hsl(212, 57%, 67%);
+    color: hsl(125, 100%, 50%);
 }
 
 /* Use of class to reference single paragraph element */
 .paragraph1:hover {
-    color: hsl(249, 57%, 67%);
+    color: hsl(177, 90%, 61%);
 }
 
 /* Text indentation */
@@ -50,15 +60,16 @@ h1 {
 a:link {
     font-size: 24px;
     color: rgb(37, 34, 236);
+    padding: 20px;
 }
 
 a:visited {
-    color: rgb(86, 243, 72);
+    color: rgb(243, 72, 80);
     text-decoration: none;
 }
 
 a:hover {
-    color: gray;
+    color: rgb(255, 0, 170);
 }
 
 /* List styling */
@@ -67,13 +78,7 @@ a:hover {
 }
 
 .list2 {
-    list-style-image:url(list_image.png);
-}
-
-
-/* Text wrapping */
-div {
-    white-space: nowrap;
+    list-style-image: url(imgs/list_image.png);
 }
 
 /* Images */
