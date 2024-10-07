@@ -1,0 +1,114 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and general styles */
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+/* Horizontal Navigation Bar */
+.horizontal-nav {
+    background-color: #333;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.horizontal-nav ul {
+    list-style: none;
+}
+
+.horizontal-nav li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.horizontal-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.horizontal-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Vertical Navigation Bar */
+.vertical-nav {
+    width: 150px;
+    background-color: #222;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 60px;
+}
+
+.vertical-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.vertical-nav li {
+    margin-bottom: 20px;
+}
+
+.vertical-nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.vertical-nav a:hover {
+    background-color: #575757;
+}
+
+/* Main content area */
+.main-content {
+    margin-left: 220px; /* leave space for vertical nav */
+    padding: 20px;
+}
+
+.main-content h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.main-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Box Model Example */
+.box-container {
+    padding: 25px;
+    display: flex;
+    gap: 50px;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    border: 5px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+}
+
+#box1 {
+    height: 100px;
+}
+
+#box2 {
+    height: 150px;
+}
