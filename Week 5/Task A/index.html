@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish HTML Table</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <div id="stylishTable">
+        <h1>Stylish HTML Table</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Header 1</th>
+                    <th>Header 2</th>
+                    <th>Header 3</th>
+                    <th>Header 4</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Data 1</td>
+                    <td>Data 2</td>
+                    <td>Data 3</td>
+                    <td>Data 4</td>
+                </tr>
+                <tr>
+                    <td>Data 5</td>
+                    <td>Data 6</td>
+                    <td>Data 7</td>
+                    <td>Data 8</td>
+                </tr>
+                <tr>
+                    <td>Data 9</td>
+                    <td>Data 10</td>
+                    <td>Data 11</td>
+                    <td>Data 12</td>
+                </tr>
+                <tr>
+                    <td>Data 13</td>
+                    <td>Data 14</td>
+                    <td>Data 15</td>
+                    <td>Data 16</td>
+                </tr>
+                <tr>
+                    <td>Data 17</td>
+                    <td>Data 18</td>
+                    <td>Data 19</td>
+                    <td>Data 20</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const table = document.getElementById("stylishTable");
+        let posX = window.innerWidth / 2 - table.offsetWidth / 2;
+        let posY = window.innerHeight / 2 - table.offsetHeight / 2;
+    
+        let isDragging = false;
+        let dragStartX, dragStartY;
+    
+        // Initial Table Position
+        table.style.left = `${posX}px`;
+        table.style.top = `${posY}px`;
+    
+        // Mouse down event to start dragging
+        table.addEventListener("mousedown", function (e) {
+            isDragging = true;
+            // Get the mouse position relative to the table
+            dragStartX = e.clientX - table.offsetLeft;
+            dragStartY = e.clientY - table.offsetTop;
+        });
+    
+        // Mouse move event to move the table while dragging
+        document.addEventListener("mousemove", function (e) {
+            if (isDragging) {
+                posX = e.clientX - dragStartX;
+                posY = e.clientY - dragStartY;
+                table.style.left = `${posX}px`;
+                table.style.top = `${posY}px`;
+            }
+        });
+    
+        // Mouse up event to stop dragging
+        document.addEventListener("mouseup", function () {
+            isDragging = false;
+        });
+    </script>
+    
+</body>
+
+</html>

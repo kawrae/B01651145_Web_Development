@@ -1,0 +1,84 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#stylishTable {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    background-color: #b41313;
+    animation: rainbow-colors 5s infinite linear;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+    background-color: #b41313;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 18px;
+    margin: 0 auto;
+}
+
+thead {
+    background-color: #1128fd50;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ffffff;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+    color: black;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #ddd;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+table {
+    animation: slide-in 1s ease-in-out;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Keyframes for the rainbow effect */
+@keyframes rainbow-colors {
+    0% { background-color: red; }
+    16.6% { background-color: orange; }
+    33.3% { background-color: yellow; }
+    50% { background-color: green; }
+    66.6% { background-color: blue; }
+    83.3% { background-color: indigo; }
+    100% { background-color: violet; }
+}
