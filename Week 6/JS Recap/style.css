@@ -1,0 +1,16 @@
+html,
+body {
+    background-color: rgb(59, 3, 3);
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: #cf2020;
+}
+
+.container-fluid, .column {
+    padding: 15px;
+}
