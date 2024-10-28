@@ -1,0 +1,50 @@
+body,
+html {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#container {
+    border: 1px solid black;
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 25px;
+    background-color: rgb(212, 130, 236);
+    box-shadow: 5px 5px 15px black;
+    padding: 20px;
+}
+
+h1 {
+    color: white;
+    font-size: 34px;
+}
+
+h2 {
+    color: white;
+}
+
+#text {
+    color: white;
+    font-weight: 600;
+    padding: 10px;
+}
+
+#submit {
+    margin: 10px;
+    background-color: rgb(238, 99, 157);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 1px solid black;
+}
+
+
+#submit:hover {
+    background-color:blueviolet;
+}
+
+#highestMark,
+#lowestMark {
+    color: white;
+    font-weight: 600;
+    padding: 10px;
+}
