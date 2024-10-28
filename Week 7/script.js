@@ -5,6 +5,7 @@ const students = [];
 const studentInput = document.getElementById("student");
 const gradeInput = document.getElementById("grade");
 const submitButton = document.getElementById("submit");
+const resetButton = document.getElementById("reset");
 
 // Push inputs from user into the array
 submitButton.addEventListener("click", () => {
@@ -33,3 +34,9 @@ function displayResults() {
     document.getElementById("highestMark").innerHTML = `Highest Grade Student: <span style="color: lime">${highestGradeStudent.name} - ${highestGradeStudent.grade}</span>`;
     document.getElementById("lowestMark").innerHTML = `Lowest Grade Student: <span style="color: red">${lowestGradeStudent.name} - ${lowestGradeStudent.grade}</span>`;
 }
+
+// Reset Function
+resetButton.addEventListener("click", () => {
+    // Reload the page to reset all program state
+    location.reload();
+});

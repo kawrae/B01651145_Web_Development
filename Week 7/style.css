@@ -28,7 +28,8 @@ h2 {
     padding: 10px;
 }
 
-#submit {
+#submit,
+#reset {
     margin: 10px;
     background-color: rgb(238, 99, 157);
     color: white;
@@ -38,7 +39,8 @@ h2 {
 }
 
 
-#submit:hover {
+#submit:hover,
+#reset:hover {
     background-color:blueviolet;
 }
 
