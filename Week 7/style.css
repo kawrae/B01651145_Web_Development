@@ -1,52 +1,100 @@
-body,
-html {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+body, html {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
 }
 
 #container {
-    border: 1px solid black;
     width: 60%;
-    margin: 0 auto;
-    border-radius: 25px;
-    background-color: rgb(212, 130, 236);
-    box-shadow: 5px 5px 15px black;
-    padding: 20px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #333;
+    text-align: center;
 }
 
 h1 {
-    color: white;
-    font-size: 34px;
+    font-size: 28px;
+    margin-bottom: 10px;
 }
 
 h2 {
-    color: white;
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 
-#text {
-    color: white;
-    font-weight: 600;
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+input[type="text"] {
     padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
-#submit,
+button {
+    display: inline-block;
+    width: 100px;
+    padding: 10px;
+    margin: 5px auto;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#highestMark, #lowestMark, #averageMark {
+    color: #333;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#student-list {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#student-list th, #student-list td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#student-list th {
+    background-color: #f2f2f2;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+}
+
 #reset {
-    margin: 10px;
-    background-color: rgb(238, 99, 157);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 12px;
-    border: 1px solid black;
+    background-color: #dc3545;
 }
 
-
-#submit:hover,
 #reset:hover {
-    background-color:blueviolet;
-}
-
-#highestMark,
-#lowestMark {
-    color: white;
-    font-weight: 600;
-    padding: 10px;
+    background-color: #c82333;
 }

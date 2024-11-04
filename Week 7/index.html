@@ -4,31 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 7 - Student Grade Comparison</title>
+    <title>Student Grade Comparison</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-
     <div id="container">
-        <!-- Student Information Prompt -->
         <h1>Student Grade Comparison</h1>
-        <h2>Enter Information for 4 People</h2>
-        <span id="text">Name: </span><input type="text" placeholder="Enter name of student.." id="student"><br>
-        <span id="text">Grade: </span><input type="text" placeholder="Enter grade of student.." id="grade"><br>
-        <button id="submit">Submit</button>
+        <h2>Enter Information for 4 Students</h2>
+        <form id="student-form">
+            <div class="form-group">
+                <label for="student">Name:</label>
+                <input type="text" id="student" placeholder="Enter student name">
+                <small id="name-error" class="error-message"></small>
+            </div>
+            <div class="form-group">
+                <label for="grade">Grade:</label>
+                <input type="text" id="grade" placeholder="Enter student grade">
+                <small id="grade-error" class="error-message"></small>
+            </div>
+            <button type="button" id="submit">Submit</button>
+        </form>
 
-
-        <!-- Comparison Results -->
-        <h1>Comparison Results:</h1>
-        <p id="highestMark">Highest Grade Student: </p>
-        <p id="lowestMark">Lowest Grade Student: </p>
-
-        <!-- Rest Button -->
+        <h1>Comparison Results</h1>
+        <p id="highestMark">Highest Grade Student:</p>
+        <p id="lowestMark">Lowest Grade Student:</p>
+        <p id="averageMark">Average Grade:</p>
+        <table id="student-list">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <p id="studentCount"></p>
         <button id="reset">Reset</button>
     </div>
-
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 
 </html>
