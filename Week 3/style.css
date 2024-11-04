@@ -1,97 +1,135 @@
-/* Demonstration of External Stylesheet */
-
-
-/* Text alignment and font variables */
-html,
-body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+/* Global Styles */
+html, body {
+    font-family: 'Arial', sans-serif;
     font-size: 16px;
-    background-image: url(imgs/leaves.jpg);
-    background-size: 100px;
-    background-repeat: repeat;
-    background-attachment: fixed;
-    color: white;
-    margin: 50px;
-    padding: 10px;
-    text-align: center;
-    border: dashed white 1px;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-/* Main Container */
-/* Text Wrapping */
+/* Container */
 .container {
-    text-align: center;
+    max-width: 800px;
+    margin: 50px auto;
     padding: 20px;
-    background-color: black;
-    white-space: wrap;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
 }
 
-/* Font style and decorations */
+/* Headings */
 h1 {
-    letter-spacing: 3pt;
-    color: hsl(212, 57%, 67%);
-    font-weight: 600;
-    font-style: italic;
-    text-shadow: 2px 2px 15px blue;
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
-/* Use of an ID to change a specific element and not all elements of the same type */
-/* Also use of :hover tag that is self explanatory */
+h3 {
+    margin: 10px 0;
+}
+
 #heading3:hover {
-    color: hsl(125, 100%, 50%);
+    color: #27ae60;
 }
 
-/* Use of class to reference single paragraph element */
+/* Paragraphs */
 .paragraph1:hover {
-    color: hsl(177, 90%, 61%);
+    color: #3498db;
 }
 
-/* Text indentation */
+.inline-style {
+    font-weight: bold;
+    color: #27ae60;
+    text-decoration: line-through;
+}
+
 .indented {
     text-indent: 35px;
 }
 
-/* Text transformation */
 .transformed {
     text-transform: uppercase;
 }
 
-/* Link styling */
-a:link {
-    font-size: 24px;
-    color: rgb(37, 34, 236);
-    padding: 20px;
+/* Links */
+.link-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
 }
 
-a:visited {
-    color: rgb(243, 72, 80);
+a {
+    font-size: 18px;
+    color: #3498db;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
 a:hover {
-    color: rgb(255, 0, 170);
+    color: #e74c3c;
 }
 
-/* List styling */
+/* Lists */
 .list1 {
     list-style: circle;
+    padding-left: 20px;
 }
 
 .list2 {
-    list-style-image: url(imgs/list_image.png);
+    list-style: none;
+    padding-left: 20px;
+}
+
+.list2 li {
+    background: url('imgs/list_image.png') no-repeat left center;
+    padding-left: 30px;
 }
 
 /* Images */
-img {
-    width: 400px;
-    height: 600px;
-    opacity: 0.7;
-    float: middle;
+.image-gallery {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
 }
 
-/* Centering Images */
-.center-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.image-gallery img {
+    width: 48%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Text Wrapping */
+.text-wrap {
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .image-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-gallery img {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .link-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .link-container a {
+        margin-bottom: 10px;
+    }
 }

@@ -9,20 +9,26 @@
 </head>
 
 <body>
-    <div class="card">
+    <div class="theme-toggle">
+        <button id="theme-button">Toggle Theme</button>
+    </div>
+    <div class="card" id="profile-card">
         <div class="card-inner">
             <div class="card-front">
-                <img src="imgs/me.jpg" id="pfp">
-                <h2>Corey Black</h2>
-                <p>Full Stack Developer</p>
+                <img src="imgs/me.jpg" id="pfp" alt="Corey Black">
+                <h2 id="name">Corey Black</h2>
+                <p id="role">Full Stack Developer</p>
+                <button class="flip-button">Flip Card</button>
             </div>
             <div class="card-back">
-                <p>Email:</p>
-                <p>B01651145@studentmail.uws.ac.uk</p>
-                <p>phone: 07802 680504</p>
+                <h3>Contact Info</h3>
+                <p>Email: <span id="email">B01651145@studentmail.uws.ac.uk</span></p>
+                <p>Phone: <span id="phone">01234 567890</span></p>
+                <button class="flip-button">Flip Card</button>
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>

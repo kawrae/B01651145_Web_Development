@@ -1,66 +1,166 @@
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
-    font-family: Arial, sans-serif;
+    background-color: #ecf0f1;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    transition: background-color 0.5s ease;
 }
-  
+
+.dark-theme {
+    background-color: #161f29;
+    color: white;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#theme-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#theme-button:hover {
+    background-color: #2980b9;
+}
+
 .card {
-    width: 300px;
+    width: 320px;
     height: 500px;
     perspective: 1000px;
+    animation: fadeIn 1s ease-in-out;
 }
-  
+
 .card-inner {
     width: 100%;
     height: 100%;
-    transition: 0.6s;
+    transition: transform 0.8s;
     transform-style: preserve-3d;
     position: relative;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-  
-.card:hover .card-inner {
+
+.card-inner.is-flipped {
     transform: rotateY(180deg);
 }
-  
+
 .card-front, .card-back {
     position: absolute;
     width: 100%;
     height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    backface-visibility: hidden;
-    border-radius: 50px;
+    padding: 20px;
+    box-sizing: border-box;
 }
-  
+
 .card-front {
-    background-color: #3498db;
+    background: linear-gradient(135deg, #3498db, #2980b9);
     color: white;
 }
-  
+
 .card-back {
-    background-color: #2ecc71;
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
     transform: rotateY(180deg);
     color: white;
+    padding: 20px;
 }
-  
+
 #pfp {
-    width: 80%;
-    border-radius: 140px;
-    border: 2px solid white;
+    width: 70%;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-    margin-top: 20px;
-    font-size: 24px;
+    margin-top: 15px;
+    font-size: 26px;
+    font-weight: bold;
 }
 
-p {
+.card-front p {
     font-size: 18px;
-    color: #dcdcdc;
-    margin: 0;
+    margin-top: 5px;
+    color: #ecf0f1;
+}
+
+.card-back h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.card-back p, #contact-form label {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #ecf0f1;
+    text-align: center;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    font-size: 16px;
+    resize: none;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.flip-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff7f50;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.flip-button:hover {
+    background-color: #ff6347;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
