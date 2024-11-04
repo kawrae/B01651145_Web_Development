@@ -4,21 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
-    <h1>BMI Calculator</h1>
+    <div id="container">
+        <h1>BMI Calculator</h1>
 
-    <label for="height">Enter your height (cm): </label>
-    <input type="text" id="height">
-    <br>
-    <label for="weight">Enter your weight (kg): </label>
-    <input type="text" id="weight">
-    <br>
-    <input type="button" value="Calculate BMI" onclick="calculateBMI()">
-    <br>
+        <form id="bmi-form">
+            <div class="form-group">
+                <label for="height">Enter your height:</label>
+                <input type="text" id="height" placeholder="Height">
+                <select id="height-unit">
+                    <option value="cm">cm</option>
+                    <option value="in">inches</option>
+                </select>
+                <small id="height-error" class="error-message"></small>
+            </div>
+            <div class="form-group">
+                <label for="weight">Enter your weight:</label>
+                <input type="text" id="weight" placeholder="Weight">
+                <select id="weight-unit">
+                    <option value="kg">kg</option>
+                    <option value="lb">lbs</option>
+                </select>
+                <small id="weight-error" class="error-message"></small>
+            </div>
+            <input type="button" value="Calculate BMI" onclick="calculateBMI()" class="btn">
+        </form>
 
-    <div id="results"></div>
+        <div id="results"></div>
+        <div id="advice"></div>
+    </div>
 
     <script src="script.js"></script>
 
