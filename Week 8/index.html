@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Application</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>Quiz Application</h1>
+    <div class="quiz">
+      <div class="question" id="question1">
+        <p>1. What does HTML stand for?</p>
+        <ul class="answers">
+          <li><input type="radio" name="q1" value="HyperText Markup Language"> HyperText Markup Language</li>
+          <li><input type="radio" name="q1" value="HighText Machine Language"> HighText Machine Language</li>
+          <li><input type="radio" name="q1" value="HyperTool Multi Language"> HyperTool Multi Language</li>
+        </ul>
+      </div>
+      <div class="question" id="question2">
+        <p>2. What is the main purpose of CSS?</p>
+        <ul class="answers">
+          <li><input type="radio" name="q2" value="To add structure to the page"> To add structure to the page</li>
+          <li><input type="radio" name="q2" value="To style the page"> To style the page</li>
+          <li><input type="radio" name="q2" value="To add functionality to the page"> To add functionality to the page</li>
+        </ul>
+      </div>
+      <div class="question" id="question3">
+        <p>3. What is the correct syntax for referring to an external script called 'app.js'?</p>
+        <ul class="answers">
+          <li><input type="radio" name="q3" value="<script href='app.js'>"> &lt;script href='app.js'&gt;</li>
+          <li><input type="radio" name="q3" value="<script src='app.js'>"> &lt;script src='app.js'&gt;</li>
+          <li><input type="radio" name="q3" value="<script ref='app.js'>"> &lt;script ref='app.js'&gt;</li>
+        </ul>
+      </div>
+      <div class="question" id="question4">
+        <p>4. Which of the following is a JavaScript framework?</p>
+        <ul class="answers">
+          <li><input type="radio" name="q4" value="Django"> Django</li>
+          <li><input type="radio" name="q4" value="React"> React</li>
+          <li><input type="radio" name="q4" value="Laravel"> Laravel</li>
+        </ul>
+      </div>
+      <div class="question" id="question5">
+        <p>5. What does HTTP stand for?</p>
+        <ul class="answers">
+          <li><input type="radio" name="q5" value="HyperText Transfer Protocol"> HyperText Transfer Protocol</li>
+          <li><input type="radio" name="q5" value="HyperText Transfer Program"> HyperText Transfer Program</li>
+          <li><input type="radio" name="q5" value="HyperText Transfer Process"> HyperText Transfer Process</li>
+        </ul>
+      </div>
+      <div class="question" id="question6">
+        <p>6. What is the function of the `<head>` tag in an HTML document?</p>
+        <ul class="answers">
+          <li><input type="radio" name="q6" value="Contains the page content displayed to the user"> Contains the page content displayed to the user</li>
+          <li><input type="radio" name="q6" value="Contains metadata and links to resources"> Contains metadata and links to resources</li>
+          <li><input type="radio" name="q6" value="Contains the main navigation menu"> Contains the main navigation menu</li>
+        </ul>
+      </div>
+      <button class="btn" onclick="submitQuiz()">Submit</button>
+      <div class="feedback" id="feedback"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
