@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=~, initial-scale=1.0">
+    <title>Week 9 - jQuery Task Planner</title>
+    <meta name="author" content="Corey Black">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Heading -->
+        <h2>Task Planner</h2>
+
+        <!-- Task Input -->
+        <input type="text" id="taskInput" placeholder="Enter a new task">
+
+        <!-- Priority Drop-down -->
+        <select id="taskPriority" name="priority">
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
+        </select>
+
+        <!-- Date input -->
+        <input type="date" id="taskDate" name="taskDate">
+
+        <!-- Add Task Button -->
+        <button id="addTaskBtn">Add Task</button>
+
+        <!-- Task List -->
+        <ul id="taskList"></ul>
+
+        <!-- Logic Button -->
+        <button id="sortByPriority">Sort By Priority</button>
+        <button id="sortByDate">Sort By Due Date</button>
+        <button id="removeCompletedBtn">Remove Completed</button>
+    </div>
+</body>
+
+<script src="script.js"></script>
+
+</html>
