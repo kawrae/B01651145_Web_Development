@@ -1,17 +1,14 @@
-/* Reset some basic styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body and general styles */
 body {
     font-family: Arial, sans-serif;
     min-height: 100vh;
 }
 
-/* Horizontal Navigation Bar */
 .horizontal-nav {
     background-color: #333;
     width: 100%;
@@ -38,7 +35,6 @@ body {
     text-decoration: underline;
 }
 
-/* Vertical Navigation Bar */
 .vertical-nav {
     width: 150px;
     background-color: #222;
@@ -70,7 +66,6 @@ body {
     background-color: #575757;
 }
 
-/* Main content area */
 .main-content {
     margin-left: 220px; /* leave space for vertical nav */
     padding: 20px;
@@ -86,7 +81,6 @@ body {
     margin-bottom: 30px;
 }
 
-/* Box Model Example */
 .box-container {
     padding: 25px;
     display: flex;

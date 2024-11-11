@@ -1,17 +1,13 @@
-// Student array
 let students = [];
 
-// Get inputs from user 
 const studentInput = document.getElementById("student");
 const gradeInput = document.getElementById("grade");
 const submitButton = document.getElementById("submit");
 const resetButton = document.getElementById("reset");
 
-// Error message elements
 const nameError = document.getElementById("name-error");
 const gradeError = document.getElementById("grade-error");
 
-// Event listener for submit button
 submitButton.addEventListener("click", () => {
     if (students.length >= 4) {
         alert("You have already entered 4 students. Please reset to enter new data.");
@@ -24,7 +20,6 @@ submitButton.addEventListener("click", () => {
 
     let valid = true;
 
-    // Validate name
     if (!studentName) {
         nameError.textContent = "Please enter a name.";
         valid = false;
@@ -56,7 +51,6 @@ submitButton.addEventListener("click", () => {
     }
 });
 
-// Display Results Function
 function displayResults() {
     const highestGradeStudent = students.reduce((prev, curr) => (prev.grade > curr.grade ? prev : curr));
     const lowestGradeStudent = students.reduce((prev, curr) => (prev.grade < curr.grade ? prev : curr));
@@ -67,7 +61,6 @@ function displayResults() {
     document.getElementById("averageMark").innerHTML = `Average Grade: <span style="color: blue">${averageGrade.toFixed(2)}</span>`;
 }
 
-// Display Student List
 function displayStudentList() {
     const tbody = document.querySelector("#student-list tbody");
     tbody.innerHTML = "";
@@ -81,13 +74,11 @@ function displayStudentList() {
     });
 }
 
-// Update student count
 function updateStudentCount() {
     const remaining = 4 - students.length;
     document.getElementById("studentCount").textContent = `Students entered: ${students.length}/4. ${remaining} more to go.`;
 }
 
-// Reset Function
 resetButton.addEventListener("click", () => {
     if (confirm("Are you sure you want to reset? All data will be lost.")) {
         students = [];
@@ -99,7 +90,6 @@ resetButton.addEventListener("click", () => {
     }
 });
 
-// Load data from local storage on page load
 window.addEventListener("load", () => {
     const storedData = localStorage.getItem("students");
     if (storedData) {
@@ -110,7 +100,6 @@ window.addEventListener("load", () => {
     }
 });
 
-// Save data to local storage
 window.addEventListener("beforeunload", () => {
     localStorage.setItem("students", JSON.stringify(students));
 });
