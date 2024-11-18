@@ -1,0 +1,76 @@
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin-left: 20px;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr.highlighted td {
+    background: rgb(124, 86, 230);
+    color: white;
+  }
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+    background-color: #e0e0e0;
+}
+
+/* Add this CSS rule to change the background when hovering */
+tr:hover {
+    background-color: #ffcccb;
+}
+
+div {
+    width: 40%;
+    height: 330px;
+    background: red;
+    position: relative;
+    animation: myfirst 4s infinite;
+    animation-play-state: paused;
+}
+
+@keyframes myfirst {
+    0% {
+        background: red;
+        left: 0px;
+        top: 0px;
+    }
+
+    25% {
+        background: green;
+        left: 200px;
+        top: 0px;
+    }
+
+    50% {
+        background: #c0c0c0;
+        left: 200px;
+        top: 200px;
+    }
+
+    75% {
+        background: black;
+        left: 0px;
+        top: 200px;
+    }
+
+    100% {
+        background: red;
+        left: 0px;
+        top: 0px;
+    }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Dev Assessment - Task 4</title>
+    <meta name="author" content="Corey Black">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+
+    <div class="container" id="quiz">
+        <p>You have 10 seconds to complete this quiz. You must agree to the terms.</p>
+        <label for="terms">Agree to the terms</label><br>
+        <input type="checkbox" id="checkme" />
+        <br><br>
+        <input type="submit" name="startQuiz" class="inputButton" disabled="disabled" id="startQuiz" value="Start Quiz" />
+        <button id="submitQuiz" style="visibility:hidden;">Submit Quiz</button>
+    </div>
+
+    
+</body>
+
+
+
+<script src="script.js"></script>
+
+
+<script>
+    const checker = document.getElementById("checkme");
+    const startButton = document.getElementById("startQuiz");
+
+    checker.onchange = function () {
+        startButton.disabled = !this.checked;
+    };
+</script>
+</html>
