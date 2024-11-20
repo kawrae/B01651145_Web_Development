@@ -1,0 +1,258 @@
+/* Responsive styles for mobile devices (Samsung Galaxy S22) */
+@media only screen and (max-width: 1000px) {
+    .mobile-logo {
+        opacity: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    /* Navbar (Hamburger Menu for Mobile) */
+    #navbar {
+        background: linear-gradient(-135deg, rgba(0, 42, 135, 0.8) 25%, rgba(120, 46, 218, 0.8) 100%);
+        color: white;
+        width: 100%;
+        position: fixed;
+        z-index: 100;
+        /* Ensure the navbar is always above */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    #nav-hide {
+        display: none;
+    }
+
+    .navbar-toggler {
+        display: block;
+        border: none;
+        color: white;
+        font-size: 24px;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    #navbar-projects {
+        padding: 10px;
+        /* Make sure the padding matches other pages */
+        height: 56px;
+        /* Set the height to match the other pages */
+        box-sizing: border-box;
+    }
+
+    /* Force white hamburger icon regardless of dark mode or browser settings */
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+    }
+
+    /* Hide the settings button on mobile */
+    .nav-right {
+        display: none;
+    }
+
+    #nav-links {
+        width: 100vw;
+        left: -66px;
+        /* Align the dropdown menu with the screen edge */
+        top: 30px;
+        /* Position it below the navbar */
+        background-color: rgba(7, 7, 56, 0.979);
+        position: absolute;
+        z-index: 101;
+        /* Ensure the dropdown is above other elements */
+    }
+
+    .nav-item {
+        border: 1px solid rgba(212, 206, 206, 0.048);
+    }
+
+    .dropdown-menu-custom {
+        right: -70px;
+        top: 75px;
+    }
+
+    /* Hide the navigation links by default */
+    .nav-center ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        background-color: rgba(8, 0, 15, 0.9);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 0;
+        margin: 0;
+        z-index: 101;
+    }
+
+    /* Display the navigation links when the navbar is toggled */
+    #navbar.active .nav-center ul {
+        display: flex;
+    }
+
+    #navbar li {
+        width: 100%;
+        text-align: center;
+    }
+
+    #navbar li a {
+        color: white;
+        padding: 14px;
+        display: block;
+        width: 100%;
+        /* Ensure the links fill the width */
+        box-sizing: border-box;
+    }
+
+    .second-theme #nav-links {
+        background-color: rgba(32, 32, 32, 0.9);
+        box-shadow: 0px 5px 30px rgba(29, 29, 29, 0.507);
+    }
+
+    .second-theme .nav-item {
+        border: 1px solid rgba(233, 226, 226, 0.116);
+    }
+
+    /* Remove any margin between the links */
+    #navbar li a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Hide unnecessary elements like avatar and images on mobile */
+    .avatar-img,
+    .laptop-image,
+    .communicate {
+        display: none;
+    }
+
+    /* Page Layout & Spacing Adjustments */
+    .container-fluid {
+        padding: 0;
+        margin: 0;
+    }
+
+    #main-content2 {
+        padding: 20px 0px;
+        z-index: 1;
+        /* Ensure the content stays behind the navbar */
+    }
+
+    #waves-container2 {
+        height: 280px;
+    }
+
+    #connect {
+        margin-bottom: 20px;
+        margin-left: 0px;
+    }
+
+    #about1 {
+        margin-right: 0;
+    }
+
+    #infinitus {
+        margin-right: 0;
+        padding-top: 25px;
+    }
+
+    .carousel-inner img {
+        padding-bottom: 20px;
+    }
+
+    .about-card {
+        margin-top: 20px;
+        padding: 20px;
+        border-radius: 16px;
+        background-color: rgb(25, 31, 55);
+        box-shadow: rgba(0, 0, 0, .1) 0 10px 32px 0;
+        transition: all 0, 1s ease-in-out 0s;
+    }
+
+    .blog-card {
+        margin-top: 16px;
+    }
+
+    #aboutTop {
+        padding-right: 12px;
+    }
+
+    .row {
+        margin: 0;
+        padding: 0;
+    }
+
+    .col-md-6 {
+        padding: 0 px;
+    }
+
+    /* Adjustments for better layout */
+    .about-me-heading,
+    .about-card h3 {
+        margin: 0 0 10px 0;
+        padding: 0;
+    }
+
+    .social-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        padding: 10px;
+    }
+
+    .social-links a {
+        display: block;
+        width: 100%;
+        max-width: none;
+        /* Remove max-width to allow full width control */
+        padding: 10px;
+        /* Slightly increased padding for better balance */
+        font-size: 16px;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+
+    .btn-github,
+    .btn-linkedin,
+    .btn-steam {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+
+    #connectWith {
+        font-size: 14px;
+        margin: 12px;
+        width: 100%;
+        margin-right: 0px;
+    }
+
+    /* Footer adjustments */
+    footer {
+        font-size: 14px;
+        text-align: center;
+        padding: 12px;
+        color: #fff;
+    }
+
+    
+}
+
+/* Responsive styling for smaller screens */
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    /* Set the project card to stack content vertically */
+    .project-card {
+        flex-direction: column;
+    }
+    
+
+}
