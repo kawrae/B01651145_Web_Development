@@ -72,12 +72,6 @@
             <a class="dropdown-item" href="#" id="drop-Item">
               <i class="fas fa-moon"></i> Dark Theme - On/Off
             </a>
-            <a class="dropdown-item" href="#" id="toggleParticles">
-              <i class="fas fa-star"></i> Particles - On
-            </a>
-            <a class="dropdown-item" href="#" id="toggleWaves">
-              <i class="fas fa-water"></i> Waves - On
-            </a>
           </div>
         </li>
       </ul>
@@ -117,11 +111,10 @@
     <div class="gradient-bar2"></div>
     <ul class="menu-items">
       <li><a href="index.html"><i class="fa fa-angle-left"></i>Home</a></li>
-      <li><a href="blog.html"><i class="fa fa-angle-left"></i>Blog</a></li>
-      <li><a href="about.html"><i class="fa fa-angle-left"></i>About</a></li>
-      <li><a href="flash.html"><i class="fa fa-angle-left"></i>Flash</a></li>
-      <li><a href="projects.html"><i class="fa fa-angle-left"></i>Download</a></li>
-      <li><a href="contact.html"><i class="fa fa-angle-left"></i>Contact</a></li>
+      <li><a href="cart.html"><i class="fa fa-angle-left"></i>Shopping Cart</a></li>
+      <li><a href="text.html"><i class="fa fa-angle-left"></i>Text Processing</a></li>
+      <li><a href="jquery.html"><i class="fa fa-angle-left"></i>jQuery UI</a></li>
+      <li><a href="sorting.html"><i class="fa fa-angle-left"></i>Sorting</a></li>
     </ul>
 
 
@@ -129,18 +122,58 @@
 
   <div class="container">
     <div id="main-content">
-      <div id="waves-container">
-        <canvas id="waveCanvas1"></canvas>
-        <canvas id="waveCanvas2"></canvas>
-      </div>
-      <div id="main-text">
-        <h1>Junior Web Developer & Graphic Designer</h1>
-        <p id="sub-text">Currently enrolled at <a href="https://www.uws.ac.uk/about-uws/" id="uni" target="_blank">the
-            University of
-            the West of Scotland</a></p>
-      </div>
-      <div id="additional-text">
-        <p>Java, JavaScript, C#, Python, SQL</p>
+      <div class="row">
+        <div class="col-md-8">
+          <div class="heading">
+            <div id="main-text">
+              <h1>Junior Web Developer & Graphic Designer</h1>
+              <p id="sub-text">Currently enrolled at <a href="https://www.uws.ac.uk/about-uws/" id="uni"
+                  target="_blank">the
+                  University of
+                  the West of Scotland</a></p>
+            </div>
+            <div id="additional-text">
+              <p>Java, JavaScript, C#, Python, SQL</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="rotating-card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img id="card-head-img" src="imgs/ringwraith.png" alt="Card Background">
+                <div class="profile-section">
+                  <img id="pfp" src="imgs/pfp.jpg" alt="Profile Picture">
+                  <h2 id="card-heading">Corey Black</h2>
+                  <p style="color: lightgray;">Junior Web Developer</p><br>
+                  <a href="https://github.com/kawrae" target="_blank" class="btn-github"><i class="fab fa-github"></i>
+                    GitHub</a>
+                </div><br>
+                <div id="card-footer">
+                  <button id="btn-flip">
+                    <i class="fa fa-arrow-up"></i>
+                    <span>More</span>
+                  </button>
+                </div>
+              </div>
+              <div class="card-back">
+                <div class="card-back-content">
+                  <h2>About Me</h2>
+                  <p>I'm a junior web developer passionate about creating beautiful, responsive web designs and
+                    intuitive user experiences.</p>
+                  <p>Contact: B01651145@studentmail.uws.ac.uk</p>
+                  <div id="card-footer">
+                    <button id="btn-flip-back">
+                      <i class="fa fa-arrow-down"></i>
+                      <span>Back</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
   </div>
@@ -154,8 +187,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
-  <script src="scripts/script.js"></script>
+  <script src="scripts/darkTheme.js"></script>
   <script src="scripts/navToggler.js"></script>
+  <script src="scripts/flip.js"></script>
 </body>
 
 </html>

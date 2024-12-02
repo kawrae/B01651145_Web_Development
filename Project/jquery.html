@@ -11,11 +11,21 @@
     <link rel="stylesheet" type="text/css" href="responsive.css">
     <link rel="stylesheet" type="text/css" href="verticalnav.css">
     <link rel="icon" type="image/png" href="imgs/icon.png" sizes="32x32">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script>
+        var $j = jQuery.noConflict();
+        $j(function () {
+            $j("#accordion").accordion();
+            $j("#datepicker").datepicker();
+            $j("#draggable").draggable();
+            $j("#resizable").resizable();
+        });
+    </script>
 </head>
 
-<body id="about-page">
+<body>
     <nav id="navbar" class="navbar navbar-light">
         <div class="container-fluid d-flex">
 
@@ -108,7 +118,7 @@
     <div id="waves-container2">
 
         <div class="heading-container">
-            <h1 class="heading-text pt-5" id="main-text">Shopping Cart</h1>
+            <h1 class="heading-text pt-5" id="main-text">jQuery UI</h1>
             <div class="heading-underline" id="sub-text"></div>
         </div>
 
@@ -124,29 +134,53 @@
                         <div class="about-heading-container">
                             <div class="content-heading">
                                 <span class="colored-bar"></span>
-                                jQuery Shopping Cart
+                                jQuery UI Library Examples
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-12 mx-auto">
-                                <div class="contact-card">
-                                    <h1 class="text-center mb-4">Shopping Cart</h1>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <h3>Products</h3>
-                                            <ul id="product-list" class="list-group">
-                                            </ul>
-                                        </div>
 
-                                        <div class="col-md-6">
-                                            <h3>Shopping Cart</h3>
-                                            <ul id="cart-list" class="list-group">
-                                            </ul>
-                                            <hr>
-                                            <p class="text-right"><strong>Total: £<span
-                                                        id="total-price">0.00</span></strong></p>
-                                            <button id="clear-cart" class="btn-block btn-process">Clear Cart</button>
+                        <div class="contact-card">
+                            <div class="row">
+                                <div class="col-md-12 mx-auto">
+                                    <h2>Accordion</h2>
+                                    <div id="accordion">
+                                        <h3>Section 1</h3>
+                                        <div>
+                                            <p>Content for Section 1.</p>
                                         </div>
+                                        <h3>Section 2</h3>
+                                        <div>
+                                            <p>Content for Section 2.</p>
+                                        </div>
+                                        <h3>Section 3</h3>
+                                        <div>
+                                            <p>Content for Section 3.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-5">
+                                <div class="col-md-12 mx-auto">
+                                    <h2>Datepicker</h2>
+                                    <p>Select a Date:</p>
+                                    <input type="text" id="datepicker" placeholder="Select a Date...">
+                                </div>
+                            </div>
+
+                            <div class="row mt-5">
+                                <div class="col-md-12 mx-auto">
+                                    <h2>Draggable</h2>
+                                    <div id="draggable" class="p-3 border bg-light">
+                                        This jQuery UI text box is draggable
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-5">
+                                <div class="col-md-12 mx-auto">
+                                    <h2>Resizable</h2>
+                                    <div id="resizable" class="p-3 border bg-light">
+                                        This jQuery UI text box is resizeable
                                     </div>
                                 </div>
                             </div>
@@ -180,7 +214,7 @@
             </div>
         </div>
     </footer>
-    
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -192,7 +226,6 @@
         crossorigin="anonymous"></script>
     <script src="scripts/darkTheme.js"></script>
     <script src="scripts/navToggler.js"></script>
-    <script src="scripts/shoppingCart.js"></script>
 </body>
 
 </html>
